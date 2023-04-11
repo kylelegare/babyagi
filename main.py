@@ -280,10 +280,10 @@ def main():
   st.title("BabyAGI")
   st.write("*A Task Driven Autonomous Agent*")
   objective = st.text_input("What Is Your Objective?", "Solve world hunger")
-  first_task = st.text_input("Input Where to start", "Develop a task list")
+  first_task = "Develop a task list"
 
   button = st.button("Run")
-  st.write("Be aware that this is an experimental project use at your own risk")
+  st.write("Be aware This is an experimental project use at your own risk")
 
   embedding_model = OpenAIEmbeddings()
   vectorstore = FAISS.from_texts(["_"],
