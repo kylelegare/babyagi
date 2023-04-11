@@ -279,7 +279,7 @@ def main():
   st.image("img/logo.png")
   st.title("BabyAGI")
   st.write("*A Task Driven Autonomous Agent*")
-  objective = st.text_input("What Is Your Objective?", "Solve world hunger")
+  objective = st.text_input("What Is Your Objective?(put any objective big or small)", "Solve world hunger")
   first_task = "Develop a task list"
 
   button = st.button("Run")
