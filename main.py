@@ -283,7 +283,7 @@ def main():
   first_task = st.text_input("Input Where to start", "Develop a task list")
 
   button = st.button("Run")
-  st.write("##### Note:This is an experimental project use at your own risk")
+  st.write("Note:This is an experimental project use at your own risk")
 
   embedding_model = OpenAIEmbeddings()
   vectorstore = FAISS.from_texts(["_"],
