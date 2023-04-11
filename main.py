@@ -273,8 +273,7 @@ def main():
   )
   st.sidebar.title("Guide")
   st.sidebar.markdown(
-    "This is an interactive demo of [Yohei's](https://twitter.com/yoheinakajima) *Task driven autonomous agent* affectionately called *BabyAGI*. \n\nPlace any objective in the textbox and the AI will identify the steps needed to complete the objective and iterate through them. Revising and adjusting where neccesary \n\nThis demo is capped at 5 Tasks, as technically it would never stop. But that's more than enough to give you an idea how it works." \n\nNote: This is small project and considered experimental, avoid sharing any sensitive information"
-
+    "This is an interactive demo of [Yohei's](https://twitter.com/yoheinakajima) *Task driven autonomous agent* affectionately called *BabyAGI*. \n\nPlace any objective in the textbox and the AI will identify the steps needed to complete the objective and iterate through them. Revising and adjusting where neccesary \n\nThis demo is capped at 5 Tasks, as technically it would never stop. But that's more than enough to give you an idea how it works."
   )
 
   st.image("img/logo.png")
@@ -284,17 +283,6 @@ def main():
   first_task = st.text_input("Input Where to start", "Develop a task list")
 
   button = st.button("Run")
-  st.write(
-    f"""
-    <style>
-    div.stButton > button:first-child {{
-        font-size: 24px;
-        padding: 0.5em 1em;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True,
-  )
 
   embedding_model = OpenAIEmbeddings()
   vectorstore = FAISS.from_texts(["_"],
